@@ -1,0 +1,11 @@
+with open("puzzle1.txt", "r") as inputPuzzle1:
+    liste = [int(line) for line in inputPuzzle1.read().split("\n")]
+
+increased = 0
+
+for index, value in enumerate(liste[1:]):
+    if liste[index] < value:
+        increased+=1
+    print("index:", index, ", value:", value, ", last value: ", liste[index])
+
+print("number of increases: ", increased)
